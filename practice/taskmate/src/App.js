@@ -1,28 +1,14 @@
+// import React from 'react';
 import './App.css';
 
-//React Function
 export default function App() {
-  return (
-    <div>APP TEXT DISPLAY</div>
-  )
-}
+    //return React.createElement("h1", {className: "active"}, "Welcome!")
+    const greeting = "Bienvenidos!"
 
-// //React Arrow Function
-// import React from 'react'
-
-// export const App = () => {
-//   return (
-//     <div>App</div>
-//   )
-// }
-
-// //React Class-based Component
-// import React, { Component } from 'react'
-
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <div>App</div>
-//     )
-//   }
-// }
+    return (
+      <>
+        <h1 className='active'>{greeting}</h1>
+        <p>texto pequeno</p>
+      </>
+    )
+  }
