@@ -1,14 +1,16 @@
-// import React from 'react';
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 import './App.css';
 
 export default function App() {
-    //return React.createElement("h1", {className: "active"}, "Welcome!")
-    const greeting = "Bienvenidos!"
 
     return (
       <>
-        <h1 className='active'>{greeting}</h1>
-        <p>texto pequeno</p>
+        <Header />
+        <div>
+          <h1 className='active'>Bienvenidos!</h1>
+        </div>
+        <Footer />
       </>
     )
   }
