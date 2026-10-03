@@ -1,16 +1,22 @@
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
 import './App.css';
 
-export default function App() {
+function App() {
+  let count = 0;
 
-    return (
-      <>
-        <Header />
-        <div>
-          <h1 className='active'>Bienvenidos!</h1>
-        </div>
-        <Footer />
-      </>
-    )
+  function handleAdd(){
+    count +=1;
+    console.log(count);
   }
+
+  return (
+    <div className="App">
+      <div className="box">
+        <p>{count}</p>
+        <button onClick={handleAdd} className="add">ADD</button>
+        <button className="sub">SUB</button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
