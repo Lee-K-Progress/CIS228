@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './AlertCard.css'
 
 export const AlertCard = ({result, children}) => {
     

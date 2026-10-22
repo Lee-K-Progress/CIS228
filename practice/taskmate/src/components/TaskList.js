@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { TaskCard } from './TaskCard'
 import { AlertCard } from './AlertCard'
+import './TaskList.css'
 
 export const TaskList = (props, info) => {
   const [tasks, setTasks] = useState([
@@ -16,14 +17,14 @@ export const TaskList = (props, info) => {
   }
 
   return (
-        <>
-        <h1>Task List {props.title} {props.subtitle}</h1>
-            <ul>
-                <button className='toggle' onClick={() => setShow(!show)}>Toggle</button>
-                { show && tasks.map((task) => (
-                    <TaskCard key={task.id} info={info} task={task} handleDelete={handleDelete} />
-                )) }
-            </ul>
+        <section className='tasklist'>
+            <h1>Task List {props.title} {props.subtitle}</h1>
+                <ul>
+                    <button className='toggle' onClick={() => setShow(!show)}>Toggle</button>
+                    { show && tasks.map((task) => (
+                        <TaskCard key={task.id} info={info} task={task} handleDelete={handleDelete} />
+                    )) }
+                </ul>
             <AlertCard result="success">
                 <p className="title">Lorem ipsum dolor sit amet.</p>
                 <p className="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, non.</p>
@@ -34,6 +35,6 @@ export const TaskList = (props, info) => {
                 <p className="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, non.</p>
             </AlertCard>
 
-        </>
+        </section>
     )
 }
