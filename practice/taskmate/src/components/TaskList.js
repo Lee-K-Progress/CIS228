@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { TaskCard } from './TaskCard'
 import { AlertCard } from './AlertCard'
 
-export const TaskList = (props) => {
+export const TaskList = (props, info) => {
   const [tasks, setTasks] = useState([
     {id: 1, name: "Record Lectures", completed: true},
     {id: 2, name: "Upload Lectures", completed: false},
