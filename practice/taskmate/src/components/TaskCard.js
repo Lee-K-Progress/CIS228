@@ -1,5 +1,5 @@
 
-export const TaskCard = ({ task, handleDelete }) => {
+export const TaskCard = ({ task, handleDelete, info }) => {
   return (
     <li key={task.id} className={task.completed ? 'completed' : 'incomplete'}>
         <span>{task.id} - {task.name}</span>

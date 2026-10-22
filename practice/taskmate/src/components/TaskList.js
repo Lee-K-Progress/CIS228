@@ -21,7 +21,7 @@ export const TaskList = (props) => {
             <ul>
                 <button className='toggle' onClick={() => setShow(!show)}>Toggle</button>
                 { show && tasks.map((task) => (
-                    <TaskCard key={task.id} task={task} handleDelete={handleDelete} />
+                    <TaskCard key={task.id} info={info} task={task} handleDelete={handleDelete} />
                 )) }
             </ul>
             <AlertCard result="success">
