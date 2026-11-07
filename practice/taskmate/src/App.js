@@ -1,16 +1,17 @@
-// import { useState } from 'react';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { TaskList } from './components/TaskList';
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { TaskList } from "./components/TaskList";
+import { AddTask } from "./components/AddTask";
+
 import './App.css';
 
 function App() {
-  const info = "Random";
 
   return (
     <div className="App">
       <Header />
-      <TaskList info={info}/>
+      <AddTask />
+      <TaskList />
       <Footer />
     </div>
   );
