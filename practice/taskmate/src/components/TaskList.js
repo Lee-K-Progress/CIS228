@@ -10,9 +10,11 @@ export const TaskList = (props, info) => {
     {id: 3, name: "Grade Assignments", completed: false},
   ]);
   const [show, setShow] = useState(true);
-  const styles = {color: "#be3434",
-                border: "1px solid #be3434",
+  const styles = {color: show ? "#3d8361" : "#be3434",
+                border: "2px solid #be3434",
+                borderColor: show ? "#3d8361" : "#be3434",
                 borderRadius: "5px",
+                fontSize: "28px",
                 padding: "20px"}
 
   function handleDelete(id){
@@ -23,7 +25,7 @@ export const TaskList = (props, info) => {
         <section className='tasklist'>
             <h1 style={styles}>Task List {props.title} {props.subtitle}</h1>
                 <ul>
-                    <button className='toggle' onClick={() => setShow(!show)}>Toggle</button>
+                    <button className='toggle' onClick={() => setShow(!show)}>{ show ? "Hide" : "Show"}</button>
                     { show && tasks.map((task) => (
                         <TaskCard key={task.id} info={info} task={task} handleDelete={handleDelete} />
                     )) }
