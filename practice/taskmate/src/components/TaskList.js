@@ -10,7 +10,10 @@ export const TaskList = (props, info) => {
     {id: 3, name: "Grade Assignments", completed: false},
   ]);
   const [show, setShow] = useState(true);
-
+  const styles = {color: "#be3434",
+                border: "1px solid #be3434",
+                borderRadius: "5px",
+                padding: "20px"}
 
   function handleDelete(id){
     setTasks(tasks.filter(task => task.id !== id));
@@ -18,7 +21,7 @@ export const TaskList = (props, info) => {
 
   return (
         <section className='tasklist'>
-            <h1>Task List {props.title} {props.subtitle}</h1>
+            <h1 style={styles}>Task List {props.title} {props.subtitle}</h1>
                 <ul>
                     <button className='toggle' onClick={() => setShow(!show)}>Toggle</button>
                     { show && tasks.map((task) => (
